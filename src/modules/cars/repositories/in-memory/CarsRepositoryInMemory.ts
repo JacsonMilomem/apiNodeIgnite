@@ -53,6 +53,10 @@ class CarsRepositoryInMemory implements ICarRepository {
     });
     return cars;
   }
+
+  async findById(car_id: any): Promise<Car> {
+    return this.cars.find((car) => car.id === car_id);
+  }
 }
 
 export { CarsRepositoryInMemory };
