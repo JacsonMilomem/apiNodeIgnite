@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { CreateRenatalController } from "@module/rentals/useCases/createRentals/CreateRetalController";
+import { CreateRenatalController } from "@module/rentals/useCases/createRentals/CreateRentalController";
 
 import { ensureAuthenticated } from "../middlewares/ensureauthenticated";
 

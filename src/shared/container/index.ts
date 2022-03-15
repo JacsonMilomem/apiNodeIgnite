@@ -4,7 +4,7 @@ import "@shared/container/providers";
 import { UsersRepository } from "@module/accounts/infra/typeorm/repositories/UsersRepository";
 import { IUsersRepository } from "@module/accounts/repositories/IUsersRepository";
 import { CarsImagesRepository } from "@module/cars/infra/typeorm/repositories/CarsImagesRepository";
-import { CarRepository } from "@module/cars/infra/typeorm/repositories/CarsRepository";
+import { CarsRepository } from "@module/cars/infra/typeorm/repositories/CarsRepository";
 import { CategoriesRepository } from "@module/cars/infra/typeorm/repositories/CategoriesRepository";
 import { SpecificationsRepository } from "@module/cars/infra/typeorm/repositories/SpecificationsRepository";
 import { ICarRepository } from "@module/cars/repositories/ICarRepository";
@@ -29,7 +29,7 @@ container.registerSingleton<IUsersRepository>(
   UsersRepository
 );
 
-container.registerSingleton<ICarRepository>("CarRepository", CarRepository);
+container.registerSingleton<ICarRepository>("CarsRepository", CarsRepository);
 
 container.registerSingleton<ICarsImagesRepository>(
   "CarsImagesRepository",

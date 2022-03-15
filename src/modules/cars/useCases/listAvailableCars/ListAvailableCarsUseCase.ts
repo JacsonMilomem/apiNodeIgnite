@@ -12,7 +12,7 @@ interface IRequest {
 @injectable()
 class ListAvailableCarsUseCase {
   constructor(
-    @inject("CarRepository")
+    @inject("CarsRepository")
     private carsRepository: ICarRepository
   ) {}
 

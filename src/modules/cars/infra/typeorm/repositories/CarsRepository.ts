@@ -4,7 +4,7 @@ import { ICreateCarDTO } from "@module/cars/dtos/ICreateCarDTO";
 import { Car } from "@module/cars/infra/typeorm/entities/Car";
 import { ICarRepository } from "@module/cars/repositories/ICarRepository";
 
-class CarRepository implements ICarRepository {
+class CarsRepository implements ICarRepository {
   private repository: Repository<Car>;
 
   constructor() {
@@ -77,6 +77,18 @@ class CarRepository implements ICarRepository {
 
     return car;
   }
+
+  async updateAvailable(id: string, available: boolean): Promise<void> {
+    await this.repository
+      .createQueryBuilder()
+      .update()
+      .set({
+        available,
+      })
+      .where("id = :id")
+      .setParameters({ id })
+      .execute();
+  }
 }
 
-export { CarRepository };
+export { CarsRepository };
