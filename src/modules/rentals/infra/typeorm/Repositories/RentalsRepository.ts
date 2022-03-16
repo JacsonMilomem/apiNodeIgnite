@@ -23,6 +23,7 @@ class RentalsRepository implements IRentalsRepository {
 
     return openByUser;
   }
+
   async create({
     user_id,
     car_id,
@@ -35,6 +36,12 @@ class RentalsRepository implements IRentalsRepository {
     });
 
     await this.repository.save(rental);
+
+    return rental;
+  }
+
+  async findById(id: string): Promise<Rental> {
+    const rental = await this.repository.findOne(id);
 
     return rental;
   }
