@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @types/nodemail
+  /usr/local/bin/node /usr/local/bin/yarn add hendlebars
 
 PATH: 
   /home/milomem/.zinit/polaris/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fnodemail: Not found
+  Error: https://registry.yarnpkg.com/hendlebars: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66988:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140662:22)
       at Request.emit (node:events:390:28)
@@ -39,6 +39,7 @@ npm manifest:
       "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
     },
     "dependencies": {
+      "@types/nodemailer": "^6.4.4",
       "bcrypt": "^5.0.1",
       "csv-parse": "^4.16.3",
       "dayjs": "^1.10.8",
@@ -810,6 +811,13 @@ Lockfile:
     version "16.11.6"
     resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
     integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
+  
+  "@types/nodemailer@^6.4.4":
+    version "6.4.4"
+    resolved "https://registry.yarnpkg.com/@types/nodemailer/-/nodemailer-6.4.4.tgz#c265f7e7a51df587597b3a49a023acaf0c741f4b"
+    integrity sha512-Ksw4t7iliXeYGvIQcSIgWQ5BLuC/mljIEbjf615svhZL10PE9t+ei8O9gDaD3FPCasUJn9KTLwz2JFJyiiyuqw==
+    dependencies:
+      "@types/node" "*"
   
   "@types/prettier@^2.1.5":
     version "2.4.2"
