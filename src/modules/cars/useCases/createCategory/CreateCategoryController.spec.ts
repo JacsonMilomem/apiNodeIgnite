@@ -34,7 +34,7 @@ describe("Create category controlle", () => {
       password: "admin",
     });
 
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     // console.log(responseToken.body);
 
@@ -45,7 +45,7 @@ describe("Create category controlle", () => {
         description: "Category SuperTest",
       })
       .set({
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${refresh_token}`,
       });
 
     expect(reposnse.status).toBe(201);
@@ -57,7 +57,7 @@ describe("Create category controlle", () => {
       password: "admin",
     });
 
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     // console.log(responseToken.body);
 
@@ -68,7 +68,7 @@ describe("Create category controlle", () => {
         description: "Category SuperTest",
       })
       .set({
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${refresh_token}`,
       });
 
     expect(reposnse.status).toBe(400);
