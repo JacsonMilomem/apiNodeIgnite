@@ -1,7 +1,7 @@
 import { ICreateUserDTO } from "@module/accounts/dtos/ICreateUserDTO";
 import { UsersRepositoryInMemory } from "@module/accounts/repositories/in-memory/UsersRepositoryInMemory";
 import { UsersTokenRepositoryInMemory } from "@module/accounts/repositories/in-memory/UsersTokenRepositoryInMemory";
-import { DayjsDateProvider } from "@shared/container/providers/implementations/DayjsDateProvider";
+import { DayjsDateProvider } from "@shared/container/providers/dateprovider/implementations/DayjsDateProvider";
 import { AppError } from "@shared/errors/AppError";
 
 import { CreateUserUseCase } from "../createUser/CreateUserUseCase";
